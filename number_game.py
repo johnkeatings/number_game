@@ -32,17 +32,19 @@ def number_game():
     while active:
         user_guess = int(input('Please pick a number between 1 and 20: '))
 
-        if turn <= 4:
+        if turn < 4:
             if user_guess == random_number:
                 print('You are correct!')  
                 play_again()
             elif user_guess < random_number:
                 print('Too low, guess again.')
                 turn += 1
+                print(f'Turns remaining: {5 - turn}')
                 print(user_guess)
             elif user_guess > random_number:
                 print('Too high, guess again.')
                 turn += 1
+                print(f'Turns remaining: {5 - turn}')
                 print(user_guess)    
         else: 
             print('Sorry, you have lost!')
