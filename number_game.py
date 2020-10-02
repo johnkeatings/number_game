@@ -8,6 +8,7 @@ def play_message():
     if message == 'y':
         number_game()
     elif message == 'n':
+        print('Please come back again!')
         sys.exit()
     else:
         print('Could not render request, goodbye.')
@@ -37,12 +38,12 @@ def number_game():
                 play_again()
             elif user_guess < random_number:
                 print('Too low, guess again.')
-                print(user_guess)
                 turn += 1
+                print(user_guess)
             elif user_guess > random_number:
                 print('Too high, guess again.')
-                print(user_guess)
                 turn += 1
+                print(user_guess)    
         else: 
             print('Sorry, you have lost!')
             play_again()
